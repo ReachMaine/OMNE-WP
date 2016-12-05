@@ -14,7 +14,7 @@
 // add_action( 'init', 'be_restore_default_gallery');
 
   require_once(get_stylesheet_directory().'/custom/branding.php');
-
+  require_once(get_stylesheet_directory().'/custom/oshine.php');
   function reach_widgets_init() {
     // widget area on home page above contnet
     register_sidebar(

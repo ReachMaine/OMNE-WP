@@ -29,16 +29,39 @@ Version: 1.2
 	}
 }
 /*  header stuff - here */
-#header-controls-right {
-	.header-code-widgets {
-		line-height: 20px;
-		padding-top: 20px;
+#header-top-bar {
+	.icon-shortcode {
+		margin-bottom: 0px;
 	}
-	.sliderbar-nav-controller-wrap {
-		.menu-controls {
-			border-radius: 2px;
+	#header-top-bar-right {
+		.top-bar-widgets {
+			float: right;
 		}
 	}
+	.mobile-nav-controller-wrap {
+		line-height: 20px;
+		float: right;
+	}
+}
+#header-wrap {
+	#header-controls-right {
+		.header-code-widgets {
+			line-height: 20px;
+			padding-top: 20px;
+		}
+		.sliderbar-nav-controller-wrap {
+			.menu-controls {
+				border-radius: 2px;
+			}
+		}
+	}
+	.logo {
+		//text-align: left; moved to media (only for tablet & bigger)
+	}
+}
+/* homepage widget area */
+#reach-home-intro-wrap {
+	padding-top: 20px;
 }
 /*** styling of content */
 .left-sidebar-page,
