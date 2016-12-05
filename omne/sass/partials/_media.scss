@@ -5,35 +5,35 @@
 		.logo {
 			text-align: left;
 		}
+		#header-controls-right {
+			.headercode-widgets {
+				.be-button-wrap {
+					padding-top: 15px;
+					padding-bottom: 10px;
+				}
+			}
+		}
 	}
 }
 /** // smaller than tablet.**/
 @media only screen and (max-width: 767px) {
-	.reach-phone-cols { // dont make social icons rows 100% at here
-		.textwidget {
-			.one-third {
-			//	width: 30%;
-			//	float: left;
-			}
-		}
-	}
-	#sb-slidebar-content {
-		#slidebar-menu {
-			.mobile-sub-menu-controller {
-			//	font-size: 22px;
-			}
-		}
 
-	}
 	#main-wrapper {
 		#header {
+			#header-top-bar {
+				#header-top-bar-right {
+					display: none;
+				}
+			}
 			.logo {
-			//	padding-top: 5px;
+					text-align: center;
+					margin-left: 0px;
 			}
 			#header-controls-right {
 			//	line-height: 120px;
 				position: relative;
-				text-align:center;
+				text-align: center;
+				right: 0px;
 			}
 		}
 		#main {
@@ -47,6 +47,44 @@
 			.be-text-inner {
 		//		width: 92%!important;
 			}
+
 		}
+	}
+}
+// mobile menu break
+@media only screen and (max-width: 960px) {
+	#main-wrapper {
+		#header {
+			border-bottom: 6px solid $OMNE-purple;
+			#header-top-bar {
+				#header-top-bar-right {
+					display: none;
+				}
+				#header-top-bar-left {
+					float: left;
+					width: initial;
+				}
+			}
+		}
+
+	}
+	#content {
+		#right-sidebar {
+			h4 {
+				font-size: 22px;
+			}
+		}
+	}
+} // end 960px/mobile menu side.
+
+@media only screen and (max-width: 320px) {
+ #header-controls-right,
+ .mobile-nav-controller-wrap {
+		line-height: 20px!important;
+	}
+	.style2 .logo {
+		max-width: 100%;
+		width: 100%;
+		text-align: center;
 	}
 }

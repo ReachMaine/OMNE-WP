@@ -39,12 +39,13 @@ Version: 1.2
 		}
 	}
 	.mobile-nav-controller-wrap {
-		line-height: 20px;
+		line-height: 20px!important;
 		float: right;
 	}
 }
 #header-wrap {
 	#header-controls-right {
+		line-height: 20px!important;
 		.header-code-widgets {
 			line-height: 20px;
 			padding-top: 20px;
