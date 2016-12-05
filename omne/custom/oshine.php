@@ -1,5 +1,7 @@
 <?php /* Oshine overrides & customizations */
 // MOBILE MENU
+register_nav_menu( 'mobile_nav', 'Mobile Menu' );
+
 if ( ! function_exists( 'be_themes_get_header_mobile_navigation' ) ) {
 	function be_themes_get_header_mobile_navigation() {
 		global $be_themes_data;
@@ -26,11 +28,11 @@ if ( ! function_exists( 'be_themes_get_header_mobile_navigation' ) ) {
 			wp_nav_menu( $defaults );
 		} else {
 			$defaults = array (
-				'theme_location'=> 'main_nav',
+				'theme_location'=> 'mobile_nav',
 				'depth'=> 3,
 				'container_class'=> 'mobile-menu',
 				'menu_id' => 'mobile-menu',
-				'menu_class' => 'clearfix zig',
+				'menu_class' => 'clearfix',
 				'fallback_cb' => '',
 				'walker' => new Be_Themes_Walker_Mobile_Menu()
 			);
