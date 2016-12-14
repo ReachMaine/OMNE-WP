@@ -90,6 +90,15 @@ Version: 1.2
 #bottom-widgets { // michelle says just Open Sans.
     font-family: "Open Sans","Arial",sans-serif!important;
 }
-
+// footer
+#footer {
+    a.reach-logo {
+    	color: white;
+    }
+    .reach-logo:before {
+    	content: url('images/reach-favicon.png');
+    	padding-right: 4px;
+    }
+}
 /* *** keep this at the end *** */
 @import "partials/media";
