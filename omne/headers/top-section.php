@@ -300,6 +300,13 @@
 		// 	echo '<div class="header-hero-section"></div>';
 		// }
 	}
+	if ( is_front_page() & is_active_sidebar('rmmz_alerts_box') )  {
+		echo '<div id="rmmz_alerts_box">';
+			echo '<div id="rmmz_alerts_box" class="be-wrap be-row clearfix">';
+			dynamic_sidebar( 'rmmz_alerts_box');
+			echo '</div>';
+		echo '</div>';
+	}
 	if ( is_front_page() & is_active_sidebar('reach-home-intro') )  {
 		echo '<div id="reach-home-intro">';
 			echo '<div id="reach-home-intro-wrap" class="be-wrap be-row clearfix">';
