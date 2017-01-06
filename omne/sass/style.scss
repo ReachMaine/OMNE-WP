@@ -70,10 +70,14 @@ Version: 1.2
 .right-sidebar-page,
 .no-sidebar-page .be-section-pad:first-child,
 .page-template-page-940-php #content,
+.page-template #content,
 .no-sidebar-page #content-wrap,
 .portfolio-archives.no-sidebar-page #content-wrap {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	#right-sidebar {
+		margin-bottom: 0px;
+	}
 }
 
 .page #comments {
@@ -81,17 +85,20 @@ Version: 1.2
 	padding-bottom: 0px!important;
 }
 
-/** footer **/
+/** footers **/
 // reach-bottom-cta
 #reach-bottom-cta{
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-bottom: 40px;
+	.widget {
+		margin-bottom: 0px;
+	}
 }
 
 #bottom-widgets { // michelle says just Open Sans.
     font-family: "Open Sans","Arial",sans-serif!important;
 }
-// footer
+// footers
 #footer {
     a.reach-logo {
     	color: white;
