@@ -1,0 +1,24 @@
+/* styling for woocommerce stuff */
+// single product
+.woocommerce #content {
+    div.product {
+        .images {
+            width: 20%!important;
+            img {
+            }
+        }
+        .summary {
+            width: 75%!important;
+            .product-addon {
+                h3.addon-name {
+                    font-size: 1em;
+                    line-height: 1em;
+                    font-weight: normal;
+                }
+                p.form-row {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
