@@ -9,6 +9,10 @@
         }
         .summary {
             width: 75%!important;
+            input.nyp-input {
+                text-align: left;
+                max-width: 200px;
+            }
             .product-addon {
                 h3.addon-name {
                     font-size: 1em;
@@ -19,6 +23,7 @@
                     margin-bottom: 0px;
                 }
             }
+
         }
     }
 }
