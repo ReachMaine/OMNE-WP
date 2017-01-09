@@ -17,6 +17,7 @@
   require_once(get_stylesheet_directory().'/custom/oshine.php');
   require_once(get_stylesheet_directory().'/custom/alerts.php');
   require_once(get_stylesheet_directory().'/custom/woocommerce.php');
+  require_once(get_stylesheet_directory().'/custom/language.php');
   function reach_widgets_init() {
     // widget area on home page above contnet
     register_sidebar(
