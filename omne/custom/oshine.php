@@ -40,3 +40,22 @@ if ( ! function_exists( 'be_themes_get_header_mobile_navigation' ) ) {
 		}
 	}
 }
+
+//if ( ! function_exists( 'be_separator' ) ) {
+	function be_separator( $atts ) {
+		extract( shortcode_atts( array(
+	        'height' => '1',
+	        'width' => '20',
+	        'color' => '#dedede',
+	    ),$atts ) );
+		$output = '';
+		$style = '';
+		$style = ( ! empty( $color ) ) ? 'background-color:'.$color.';color:'.$color.';' : $style ;
+		$style .= ( ! empty( $height ) ) ? 'height:'.$height.'px;' : '' ;
+		$style .= ( ! empty( $width ) ) ? 'width:'.$width.'%;' : '' ;
+
+		$output .='<hr class="separator" style="'.$style.'" />';
+		return $output;
+	}
+	add_shortcode( 'separator', 'be_separator' );
+//}

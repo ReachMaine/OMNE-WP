@@ -64,6 +64,9 @@ Version: 1.2
 /* homepage widget area */
 #reach-home-intro-wrap {
 	padding-top: 20px;
+	.oshine-module {
+		margin-bottom: 30px;
+	}
 }
 /*** styling of content */
 .left-sidebar-page,
@@ -78,13 +81,42 @@ Version: 1.2
 	#right-sidebar {
 		margin-bottom: 0px;
 	}
+	.style3-blog .article-details {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
+// single post
 
+.single-post .style2-blog {
+	.post-thumb {
+		float: left;
+		width: 40%;
+		margin-right: 5%;
+	}
+	.article-details {
+		float: left;
+		width: 55%;
+	}
+}
+.portfolio-container .thumb-bg {
+	background-color: transparent!important;
+}
 .page #comments {
 	padding-top: 0px!important;
 	padding-bottom: 0px!important;
 }
+/*   sidebars */
 
+#right-sidebar {
+	background-color: $OMNE-ligth-teal;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.sidebar-widgets-wrap {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
 /** footers **/
 // reach-bottom-cta
 #reach-bottom-cta{
