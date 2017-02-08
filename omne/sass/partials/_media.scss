@@ -18,6 +18,11 @@
 /** // smaller than tablet.**/
 @media only screen and (max-width: 767px) {
 
+	h2 {
+		font-size: 30px !important;
+		line-height: 36px !important;
+	}
+
 	#main-wrapper {
 		#header {
 			#header-top-bar {
