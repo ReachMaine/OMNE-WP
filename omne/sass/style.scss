@@ -68,6 +68,26 @@ Version: 1.2
 		margin-bottom: 30px;
 	}
 }
+
+//Removed a lot of the extra space around blocks
+.tatsu-text-inner,
+.tatsu-text-block,
+.tatsu-text-block img {
+    margin-bottom: 15px;
+}
+
+.tatsu-button-wrap.align-block {
+	margin: 0px 0px 15px 0px;
+}
+
+.oshine-module {
+	margin-bottom: 15px
+}
+
+.tatsu-module {
+	margin-bottom: 10px;
+}
+
 /*** styling of content */
 .left-sidebar-page,
 .right-sidebar-page,

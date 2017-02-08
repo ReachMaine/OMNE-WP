@@ -1,4 +1,12 @@
 /* **** media **** */
+//first break of desktop
+@media only screen and (max-width: 1279px) {
+	.omne-homepage-stacked-images .animate-icon-module-style1-wrap.clearfix { //setting height of two side boxes on homepage top box
+		height: 185px !important;
+	}
+}
+
+
 // tablet & bigger
 @media only screen and (min-width: 768px) {
 	#header-wrap {
@@ -14,6 +22,7 @@
 			}
 		}
 	}
+
 }
 /** // smaller than tablet.**/
 @media only screen and (max-width: 767px) {
@@ -43,7 +52,22 @@
 		}
 		#main {
 		//	background-color: $wakeland-ltblue;
+		.tatsu-row {
+			margin-left: 0px;
+			margin-right: 0px;
 		}
+		.tatsu-section .tatsu-row-wrap:last-child .tatsu-column {
+			margin-bottom: 15px;
+		}
+
+		.tatsu-section-pad {
+			padding: 10px !important;
+		}
+
+		.tp-revslider-mainul {
+			width: 100% !important;
+		}
+
 		#hero-section {
 		//	top: 120px;
 		}
@@ -52,10 +76,30 @@
 			.be-text-inner {
 		//		width: 92%!important;
 			}
+			.be-wrap{
+				width: 90%;
+			}
+		}
+		}
+	}
+	#right-sidebar {
+		margin-top: 0px !important;
+	}
 
+	#bottom-widgets {
+		padding-bottom: 35px;
+		padding-top: 35px;
+		.column-block {
+		margin-bottom: 25px !important;
 		}
 	}
 }
+@media only screen and (max-width: 959px) {
+	.omne-homepage-stacked-images .animate-icon-module-style1-wrap.clearfix { //setting height of two side boxes on homepage top box
+		height: 138px !important;
+	}
+}
+
 // mobile menu break
 @media only screen and (max-width: 960px) {
 	#main-wrapper {
