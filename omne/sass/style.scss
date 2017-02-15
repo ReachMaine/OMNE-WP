@@ -10,6 +10,7 @@ Version: 1.2
 @import "partials/colors";
 @import "partials/typography";
 @import "partials/woo";
+@import "partials/events";
 
 
 
@@ -107,7 +108,7 @@ Version: 1.2
 	}
 }
 // single post
-
+/*  - moved to media - only for bigger than
 .single-post .style2-blog {
 	.post-thumb {
 		float: left;
@@ -118,7 +119,7 @@ Version: 1.2
 		float: left;
 		width: 55%;
 	}
-}
+} */
 .portfolio-container .thumb-bg {
 	background-color: transparent!important;
 }
@@ -140,6 +141,15 @@ Version: 1.2
 		padding-left: 50px;
 		.icon-quote {
 			font-size: 42px;
+		}
+		.testimonial-content:empty {
+			margin-bottom :0px;
+		}
+		h6.testimonial-author {
+			margin-bottom: 0px;
+		}
+		.testimonial-author-role {
+			font-size: .8em;
 		}
 	}
 

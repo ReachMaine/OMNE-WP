@@ -23,6 +23,29 @@
 		}
 	}
 
+	.single-post .style2-blog {
+		.post-thumb {
+			float: left;
+			width: 40%;
+			margin-right: 5%;
+		}
+		.article-details {
+			float: left;
+			width: 55%;
+		}
+	}
+
+}
+@media only screen and (max-width: 768px) { // tablet and smaller.
+	#right-sidebar {
+		.testimonial_slide .testimonial_slide_inner {
+			padding-left: 0px;
+			.icon-quote {
+				position: relative;
+				top: auto;
+			}
+		}
+	}
 }
 /** // smaller than tablet.**/
 @media only screen and (max-width: 767px) {
@@ -84,6 +107,7 @@
 	}
 	#right-sidebar {
 		margin-top: 0px !important;
+
 	}
 
 	#bottom-widgets {

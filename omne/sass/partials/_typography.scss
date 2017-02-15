@@ -1,7 +1,7 @@
 
 /* ----------- Typography ------------------------------- */
-
-h3 {
+// these should be adjusted in the theme options-> typography
+/* h3 {
 	font-size: 23px !important;
 	line-height: 27px !important;
 }
@@ -17,6 +17,13 @@ h5 {
 	line-height: 20px !important;
 }
 
+*/
+h5.post-title {
+
+}
+ul {
+	list-style: none;
+}
 i.fa-pull-left {
 	float: left;
 	padding-right: 5px;
@@ -26,7 +33,5 @@ i.fa-pull-right {
 	padding-left: 5px;
 }
 
-ul.ecs-event-list h4 {
-	color: #6fc9c5;
-}
+
 /* ----------- end typography ----------- */
