@@ -28,5 +28,29 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 
 }
-// remove category on single product
+// remove display of category on single product
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// allow COD payment for Only meeting category & nursing summit categories of products
+function filter_gateways($gateways){
+    global $woocommerce;
+
+    foreach ($woocommerce->cart->cart_contents as $key => $values ) {
+        // ID(s) of the category we want to remove gateways from
+        $category_ids = array( 14,15 ); // nursing summit & monthly meeting category id's
+
+        // Get the terms, i.e. category list using the ID of the product
+        $terms = get_the_terms( $values['product_id'], 'product_cat' );
+
+        // Because a product can have multiple categories, we need to iterate through the list of the products category for a match
+        foreach ($terms as $term) {
+            if( ! in_array($term->term_id,$category_ids)){
+                unset($gateways['cod']);
+                break;
+            }
+        break;
+        }
+    }
+    return $gateways;
+}
+add_filter('woocommerce_available_payment_gateways','filter_gateways');
