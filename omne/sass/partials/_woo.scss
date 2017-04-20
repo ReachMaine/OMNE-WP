@@ -2,6 +2,10 @@
 // single product
 .woocommerce #content {
     div.product {
+      margin-bottom: 0px;
+      .product-single-boxed-content {
+        margin-bottom: 0px;
+      }
         .images {
             width: 20%!important;
             img {
@@ -9,6 +13,9 @@
         }
         .summary {
             width: 75%!important;
+            .product_title {
+              width: 100%;
+            }
             input.nyp-input {
                 text-align: left;
                 max-width: 200px;
