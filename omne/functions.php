@@ -46,4 +46,10 @@
  }
 add_action( 'widgets_init', 'reach_widgets_init' );
 
+add_action( 'after_setup_theme', 'remove_parent_theme_features', 10 );
+function remove_parent_theme_features() {
+  /* remove oshine's adding this to product */
+  remove_action('woocommerce_single_product_summary', 'be_themes_share_woo_products', 59);
+}
+
 ?>
