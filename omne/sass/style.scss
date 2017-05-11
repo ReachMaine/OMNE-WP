@@ -44,7 +44,14 @@ Version: 1.2
 		line-height: 20px!important;
 		float: right;
 	}
+	ul#topbar-menu li:last-child{
+		display: none;
+	}
 }
+
+body.logged-in 	#header-top-bar ul#topbar-menu li:last-child{
+		display: inline;
+	}
 #header-wrap {
 	#header-controls-right {
 		line-height: 20px!important;
