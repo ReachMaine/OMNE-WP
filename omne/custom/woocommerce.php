@@ -21,6 +21,12 @@ remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 )
 // to remove sku
 add_filter( 'wc_product_sku_enabled', '__return_false' );
 
+// remove the descrtion tab title.
+add_filter ('woocommerce_product_description_tab_title','eainc_remove_descr_tab_title' );
+function eainc_remove_descr_tab_title($title) {
+    return '';
+}
+
 // remove additional information tab
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 function woo_remove_product_tabs( $tabs ) {
@@ -43,12 +49,14 @@ function filter_gateways($gateways){
         $terms = get_the_terms( $values['product_id'], 'product_cat' );
 
         // Because a product can have multiple categories, we need to iterate through the list of the products category for a match
-        foreach ($terms as $term) {
-            if( ! in_array($term->term_id,$category_ids)){
-                unset($gateways['cod']);
-                break;
-            }
-        break;
+        if (is_array($terms) ) {
+          foreach ($terms as $term) {
+              if( ! in_array($term->term_id,$category_ids)){
+                  unset($gateways['cod']);
+                  break;
+              }
+          break;
+          }
         }
     }
     return $gateways;
