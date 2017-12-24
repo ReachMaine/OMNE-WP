@@ -18,7 +18,7 @@
   require_once(get_stylesheet_directory().'/custom/alerts.php');
   require_once(get_stylesheet_directory().'/custom/woocommerce.php');
   require_once(get_stylesheet_directory().'/custom/language.php');
-    require_once(get_stylesheet_directory().'/custom/tribe_events.php');
+  require_once(get_stylesheet_directory().'/custom/tribe_events.php');
   function reach_widgets_init() {
     // widget area on home page above contnet
     register_sidebar(
@@ -42,10 +42,22 @@
              'after_widget'  => '</div>',
              'before_title'  => '<h6>',
              'after_title'   => '</h6>',
-      )
-   );
+        )
+     );
+
+   register_sidebar(
+      array(
+       'name' => __( 'After single event content', 'be-themes' ),
+       'id'   => 'reach-single-event-after',
+       'description'   => __( 'Displays after the content of the single event ', 'be-themes' ),
+       'before_widget' => '',
+       'after_widget'  => '',
+       'before_title'  => '<h6>',
+       'after_title'   => '</h6>',
+        )
+    );
  }
-add_action( 'widgets_init', 'reach_widgets_init' );
+add_action( 'widgets_init', 'reach_widgets_init', 12);
 
 add_action( 'after_setup_theme', 'remove_parent_theme_features', 10 );
 function remove_parent_theme_features() {
