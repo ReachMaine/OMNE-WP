@@ -9,9 +9,6 @@ Author URI: http://bostondv.com
 Text Domain: upw
 Domain Path: /languages/
 License: MIT
-*
-* Override mods
-*  29Sept16 zig - dont show anything if no posts
 */
 
 if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
@@ -157,7 +154,6 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
         $before_widget = str_replace('class="', 'class="'. $class . ' ', $before_widget);
       }
 
-/* moved zig
       echo $before_widget;
 
       if ( $title ) {
@@ -167,7 +163,7 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
         if ( $title_link ) echo '</a>';
         echo $after_title;
       }
-*/
+
       $args = array(
         'posts_per_page' => $number,
         'order' => $order,
@@ -188,17 +184,7 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       $args = apply_filters('upw_wp_query_args', $args, $instance, $this->id_base);
 
       $upw_query = new WP_Query($args);
-      if ($upw_query->have_posts()) {
-          echo $before_widget;
 
-          if ( $title ) {
-            echo $before_title;
-            if ( $title_link ) echo "<a href='$title_link'>";
-            echo $title;
-            if ( $title_link ) echo '</a>';
-            echo $after_title;
-          }
-      }
       if ($instance['template'] === 'custom') {
         $custom_template_path = apply_filters('upw_custom_template_path',  '/upw/' . $instance['template_custom'] . '.php', $instance, $this->id_base);
         if ( $template = locate_template($custom_template_path) ) {
@@ -213,12 +199,10 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       }
 
       // Reset the global $the_post as this query will have stomped on it
-
-
-      if ($upw_query->have_posts()) {
-          echo $after_widget;
-      }
       wp_reset_postdata();
+
+      echo $after_widget;
+
       if ($cache) {
         $cache[$args['widget_id']] = ob_get_flush();
       }
@@ -636,7 +620,7 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       </div>
 
       <p class="upw-credits">
-        <?php _e('Enjoy this plugin? Please <a href="http://pomelodesign.com/donate/" target="_blank">donate to support development</a>.', 'upw'); ?>
+        <?php _e('Enjoy this plugin? <a href="http://bostondv.com/tips/" target="_blank">Send a tip to support development</a>.', 'upw'); ?>
       </p>
 
       <?php if ( $instance ) { ?>
