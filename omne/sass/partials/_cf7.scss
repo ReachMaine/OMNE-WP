@@ -1,0 +1,21 @@
+// contact form 7 styling
+// special colors
+$cf7-success-color: #fff;
+$cf7-success-background: #2d716e; // dk teal
+
+.wpcf7-form {
+   textarea {
+      height: 200px;
+      background-color: white;
+    }
+
+    label.cf7-required:after {
+      content:"*";
+      color: red;
+    }
+}
+.wpcf7 .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+	color: $cf7-success-color;
+	background-color: $cf7-success-background;
+	font-weight: bold;
+}
