@@ -45,14 +45,27 @@ Version: 1.2
 		line-height: 20px!important;
 		float: right;
 	}
-	ul#topbar-menu li:last-child{
-		display: none;
+	ul#topbar-menu {
+		li:last-child { // hide my account
+			display: none;
+		}
+		li.omne-login:after { // second to last child on menu s.t. we can hide the end pipe, when my acount is hidden
+			content: "";
+		}
 	}
+
+
 }
 
-body.logged-in 	#header-top-bar ul#topbar-menu li:last-child{
-		display: inline;
+body.logged-in 	#header-top-bar ul#topbar-menu {
+	li.omne-login:after {
+		content: " | "; 
 	}
+	li:last-child {
+		display: inline; // show my account if logged in.
+	}
+
+}
 #header-wrap {
 	#header-controls-right {
 		line-height: 20px!important;

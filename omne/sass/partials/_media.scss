@@ -65,6 +65,7 @@
 			.logo {
 					text-align: center;
 					margin-left: 0px;
+					max-width:100%;
 			}
 			#header-controls-right {
 			//	line-height: 120px;
@@ -72,7 +73,7 @@
 				text-align: center;
 				right: 0px;
 			}
-		}
+		} // end header
 		#main {
 		//	background-color: $wakeland-ltblue;
 		.tatsu-row {
