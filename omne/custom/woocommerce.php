@@ -62,3 +62,28 @@ function filter_gateways($gateways){
     return $gateways;
 }
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
+
+
+// Add email attachement for membership product.
+
+add_filter( 'woocommerce_email_attachments', 'add_woocommerce_attachments_for_certain_product', 10, 3 );
+
+function add_woocommerce_attachments_for_certain_product ( $attachments, $email_id, $email_order ){
+    $product_id = 4164; // membership product
+
+    $email_ids = array( 'customer_processing_order', 'customer_note' );
+    if ( in_array ( $email_id, $email_ids ) ) {
+      $order = wc_get_order( $email_order );
+      $items = $order->get_items();
+
+      foreach ( $items as $item ) {
+        if ( $product_id === $item->get_product_id() ) {
+  	       $upload_dir = wp_upload_dir();
+           $attachments[] = $upload_dir['basedir'] . "/pdfs/OMNL-Membership-letter.pdf";
+
+        }
+      }
+
+  }
+  return $attachments;
+}
