@@ -71,7 +71,7 @@ add_filter( 'woocommerce_email_attachments', 'add_woocommerce_attachments_for_ce
 function add_woocommerce_attachments_for_certain_product ( $attachments, $email_id, $email_order ){
     $product_id = 4164; // membership product
 
-    $email_ids = array( 'customer_processing_order', 'customer_note' );
+    $email_ids = array( 'customer_processing_order', 'customer_note', 'customer_on_hold_order' );
     if ( in_array ( $email_id, $email_ids ) ) {
       $order = wc_get_order( $email_order );
       $items = $order->get_items();
