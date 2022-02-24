@@ -1,11 +1,11 @@
 <?php
-/* mods 
-	10Oct16 zig - add widget area above bottom-widgets for reach CTA 
+/* mods
+	10Oct16 zig - add widget area above bottom-widgets for reach CTA
  */
-	if (is_active_sidebar('reach-bottom-cta')) { 
+	if (is_active_sidebar('reach-bottom-cta')) {
 		echo '<footer id="reach-bottom-cta">';
-			echo '<div id="reach-bottom-cta-wrap" class="be-wrap be-row clearfix">';
-			dynamic_sidebar( 'reach-bottom-cta'); 
+			echo '<div id="reach-bottom-cta-wrap" class="be-wrapx be-rowx clearfix">';
+			dynamic_sidebar( 'reach-bottom-cta');
 			echo '</div>';
 		echo '</footer>';
 	}
@@ -43,13 +43,13 @@
 			<div id="bottom-widgets-wrap" class="be-wrap be-row clearfix">
 				<?php for($j = 1; $j <= $i; $j++) : ?>
 					<div class="<?php echo $col_class; ?> column-block clearfix">
-						<?php 
+						<?php
 							if ( is_active_sidebar( 'footer-widget-'.$j ) ) {
 								dynamic_sidebar( 'footer-widget-'.$j );
 							}
 						?>
 					</div>
-				<?php endfor; ?>	
+				<?php endfor; ?>
 			</div>
 		</footer>
 	<?php } ?>

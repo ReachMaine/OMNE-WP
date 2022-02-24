@@ -61,7 +61,7 @@ function filter_gateways($gateways){
     }
     return $gateways;
 }
-add_filter('woocommerce_available_payment_gateways','filter_gateways');
+//add_filter('woocommerce_available_payment_gateways','filter_gateways');
 
 
 // Add email attachement for membership product.
